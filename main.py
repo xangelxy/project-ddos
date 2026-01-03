@@ -196,14 +196,7 @@ def login():
 
 if __name__ == "__main__":
     try:
-        # Inisialisasi colorama untuk support warna di Windows
-        colorama.init()
-        
-        # Cek apakah running sebagai root di Linux
-        if os.name != 'nt' and os.geteuid() != 0:
-            print(f"{Colors.RED}Error: Script ini harus dijalankan sebagai root{Colors.RESET}")
-            sys.exit(1)
-            
+
         login()
     except KeyboardInterrupt:
         print(f"\n{Colors.GREEN}Program dihentikan oleh user.{Colors.RESET}")
